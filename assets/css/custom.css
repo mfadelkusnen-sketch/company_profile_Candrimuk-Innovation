@@ -1,0 +1,267 @@
+/* CANDRIMUK INNOVATION - Modern Technology Theme
+   CSS tambahan. Struktur HTML dan pembagian tugas tetap mengikuti instruksi guru. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap');
+
+:root {
+    --tech-navy: #071426;
+    --tech-navy-2: #0b1d35;
+    --tech-blue: #176bff;
+    --tech-cyan: #20e3d2;
+    --tech-text: #eaf4ff;
+    --tech-muted: #a8b8cc;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 82px;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #17243a;
+    background: #f4f8fc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+}
+
+.navbar {
+    background: rgba(5, 17, 35, 0.94) !important;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(32, 227, 210, 0.16);
+}
+
+.navbar-brand {
+    letter-spacing: 0.04em;
+    font-size: 0.98rem;
+}
+
+.navbar-brand img {
+    object-fit: cover;
+    box-shadow: 0 0 16px rgba(32, 227, 210, 0.25);
+}
+
+.navbar .nav-link {
+    color: #d6e5f7 !important;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--tech-cyan) !important;
+}
+
+.btn-info {
+    --bs-btn-bg: var(--tech-cyan);
+    --bs-btn-border-color: var(--tech-cyan);
+    --bs-btn-color: #04172a;
+    --bs-btn-hover-bg: #73fff2;
+    --bs-btn-hover-border-color: #73fff2;
+    --bs-btn-hover-color: #04172a;
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(32, 227, 210, 0.18);
+}
+
+.btn-primary {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* Hero dengan nuansa teknologi */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 78% 28%, rgba(23, 107, 255, .28), transparent 30%),
+        radial-gradient(circle at 18% 85%, rgba(32, 227, 210, .13), transparent 28%),
+        linear-gradient(120deg, rgba(5, 17, 35, .97), rgba(8, 34, 65, .91)),
+        url("../images/hero-bg.jpg") center/cover;
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-section::before {
+    inset: 0;
+    opacity: .22;
+    background-image:
+        linear-gradient(rgba(32, 227, 210, .18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32, 227, 210, .18) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(90deg, transparent, #000 45%, #000);
+}
+
+.hero-section::after {
+    width: 360px;
+    height: 360px;
+    right: -110px;
+    top: 30px;
+    border: 1px solid rgba(32, 227, 210, .28);
+    border-radius: 50%;
+    box-shadow: 0 0 0 35px rgba(32, 227, 210, .035),
+                0 0 0 75px rgba(32, 227, 210, .025),
+                0 0 65px rgba(23, 107, 255, .2);
+}
+
+.hero-section h1 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    letter-spacing: .035em;
+    text-shadow: 0 0 28px rgba(32, 227, 210, .22);
+}
+
+.hero-section h4,
+.text-info {
+    color: var(--tech-cyan) !important;
+}
+
+.hero-section .lead {
+    color: #c5d6e9;
+    line-height: 1.8;
+}
+
+.badge.bg-info {
+    background: rgba(32, 227, 210, .16) !important;
+    color: var(--tech-cyan) !important;
+    border: 1px solid rgba(32, 227, 210, .32);
+    padding: .6rem .9rem;
+}
+
+/* Statistik */
+#tentang {
+    background: linear-gradient(100deg, #1053c7, #087fbd) !important;
+    box-shadow: 0 12px 35px rgba(12, 77, 165, .14);
+}
+
+#tentang h2 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    letter-spacing: .02em;
+}
+
+/* Section dan kartu */
+section:not(.hero-section) {
+    position: relative;
+}
+
+#layanan {
+    background: #f3f7fc !important;
+}
+
+#layanan .card,
+#eksekutif .card,
+#prestasi .bg-white {
+    border: 1px solid rgba(18, 65, 115, .08) !important;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(13, 38, 76, .07) !important;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+#layanan .card:hover,
+#eksekutif .card:hover,
+#prestasi .bg-white:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(13, 75, 145, .14) !important;
+    border-color: rgba(32, 190, 210, .38) !important;
+}
+
+#layanan h6,
+.text-primary {
+    color: #1264d8 !important;
+}
+
+#layanan .fs-1,
+#prestasi .fs-2 {
+    color: #087fc5 !important;
+}
+
+#eksekutif {
+    background:
+        radial-gradient(circle at 10% 15%, rgba(23, 107, 255, .06), transparent 28%),
+        #ffffff;
+}
+
+#eksekutif .badge {
+    border-radius: 999px;
+    padding: .55rem .9rem;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid #e8f7ff;
+    outline: 2px solid #1685db;
+    background: #eaf3fb;
+    box-shadow: 0 8px 22px rgba(17, 92, 160, .15);
+}
+
+#eksekutif .card h6 {
+    line-height: 1.45;
+}
+
+#prestasi {
+    background: linear-gradient(180deg, #f2f7fc, #eaf2fb) !important;
+}
+
+/* Footer */
+footer {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(23, 107, 255, .18), transparent 28%),
+        linear-gradient(120deg, #061326, #0b2340) !important;
+    border-top: 1px solid rgba(32, 227, 210, .2);
+}
+
+footer h5 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    letter-spacing: .03em;
+}
+
+footer a {
+    color: var(--tech-cyan);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Tampilan ponsel */
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: 420px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-section::after {
+        width: 220px;
+        height: 220px;
+        right: -115px;
+        top: 35px;
+    }
+
+    .profile-photo {
+        width: 112px;
+        height: 112px;
+    }
+
+    .navbar .btn {
+        margin-top: .5rem;
+        margin-left: 0 !important;
+    }
+}
